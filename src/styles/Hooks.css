@@ -1,0 +1,19 @@
+.hook {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.hook-nav{
+  border-bottom: 1px solid #ddd;
+}
+
+.hook-nav > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hook-nav .nav-link {
+  padding: 7px;
+}

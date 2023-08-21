@@ -1,0 +1,15 @@
+.immerList {
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.immerList>li {
+  padding: 5px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.immerList>li:last-child {
+  border: none;
+}
