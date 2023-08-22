@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// Devtools통해서 online, offline 설정
 function HookUseNetwork() {
 
   const useNetwork = (onChange) => {
@@ -29,10 +30,8 @@ function HookUseNetwork() {
   const onLine = useNetwork(handleNetworkChange)
 
   return (
-    <div className="App">
-      <div className="App-header">
-        <h1>{onLine ? "Online" : "Offline"}</h1>
-      </div>
+    <div>
+      <h1>{onLine ? "Online" : "Offline"}</h1>
     </div>
   )
 }

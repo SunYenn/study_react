@@ -1,19 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function HookUseBeforeLeave() {
 
-  const useBeforeLeave = (onBefore) => {
+  const [h2color, seth2Color] = useState('black')
 
-    // 밑 코드에서 문제 발생
-    // if (typeof onBefore !== "function") {
-    //   return
-    // }
-    
+  // typescript : const useBeforeLeave = (onBefore: Function) => {
+  const useBeforeLeave = () => {
+
+    // typescript : const handle = (event: Object) => {
     const handle = (event) => {
       const {clientY} = event
       if (clientY <= 0){
-        onBefore()
+        onOut()
+      } else {
+        onIn()
       }
     }
     useEffect(() => {
@@ -22,12 +23,13 @@ function HookUseBeforeLeave() {
     }, [])
   }
 
-  const onBefore = () => console.log("pls dont leave")
-  useBeforeLeave(onBefore)
+  const onOut = () => seth2Color('red')
+  const onIn = () => seth2Color('blue')
+  useBeforeLeave()
 
   return (
     <div>
-        <h2>Hello</h2>
+        <h2 style={{ color : h2color }}>Hello</h2>
     </div>
   )
 }

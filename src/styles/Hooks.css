@@ -35,6 +35,25 @@
   align-items: center;
 }
 
+.hook-main > div {
+  min-width: 350px;
+}
+
 .hook-main .btn {
   width: auto;
+}
+
+.toast {
+  position: absolute;
+  top: 5px;
+  background-color: rgba(255, 69, 69, 0.404);
+}
+
+.scroll {
+  height: 1000vh;
+}
+
+.scroll > h1 {
+  position: fixed;
+  top: 200px;
 }

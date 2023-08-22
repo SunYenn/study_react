@@ -1,10 +1,12 @@
-import React, { useState, useEffect, useRef, ChangeEvent } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 
 function HookUsePreventLeave() {
 
   const usePreventLeave = () => {
+
+    // typescript : const listener = (event: Object) => {
     const listener = (event) => {
       event.preventDefault()
       event.returnValue = ''
@@ -19,7 +21,7 @@ function HookUsePreventLeave() {
 
   return (
     <div>
-      <h2>Hello</h2>
+      <h2>Hi</h2>
       <Button onClick={enablePrevent}>protect</Button>
       <Button onClick={disablePrevent}>unprotect</Button>
     </div>

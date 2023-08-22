@@ -13,6 +13,8 @@ function HookUseTabs() {
     }
   ];
   
+
+  // typescript : const useTabs = (initialTab: number, allTabs : any[]) => {
   const useTabs = (initialTab, allTabs) => {
     const [currentIndex, setCurrentIndex] = useState(initialTab)
     if(!allTabs || !Array.isArray(allTabs)) {
@@ -20,7 +22,7 @@ function HookUseTabs() {
     }
     return {
       currentItem: allTabs[currentIndex],
-      changeItem: setCurrentIndex
+      changeItem: setCurrentIndex // currentIndex를 업데이트하여 현재 선택된 탭을 변경하는 함수.
     }
   }
 
@@ -28,14 +30,15 @@ function HookUseTabs() {
 
   return (
     <div>
-      <h2>Hello</h2>
       {content.map((section, index) => (
-        <Button variant='info' onClick={() => tabs?.changeItem(index)}>
+        // typescript : <Button variant='info' onClick={() => tabs.changeItem(index)} key={index}>
+        <Button variant='info' onClick={() => tabs.changeItem(index)} key={index}>
           {section.tab}
         </Button>
       ))}
       <div>
-        {tabs?.currentItem.content}
+        {/* typescript : {tabs?.currentItem.content} */}
+        {tabs.currentItem.content}
       </div>
     </div>
   );

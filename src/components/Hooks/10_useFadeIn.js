@@ -1,9 +1,11 @@
-import React, { useEffect, useRef } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect, useRef } from 'react';
 
 function HookUseFadeIn() {
 
+  // typescript : const useFadeIn = (duration: number, delay: number) => {
   const useFadeIn = (duration, delay) => {
+
+    // typscript : const element = useRef<HTMLHeadingElement | HTMLParagraphElement>(null);
     const element = useRef();
     useEffect(() => {
       if(element.current) {
@@ -12,7 +14,7 @@ function HookUseFadeIn() {
         current.style.opacity = '1'
       }
     }, [])
-    return { ref: element, style: { opacity: 0 } }
+    return { ref: element, style: { opacity: 0 } } //  페이드인 효과가 시작되기 전, 요소의 초기 상태 적용
   }
 
   const fadeInH2 = useFadeIn(1, 2)
@@ -20,8 +22,8 @@ function HookUseFadeIn() {
 
   return (
     <div>
-        <h2 {...fadeInH2}>Hello</h2>
-        <p {...fadeInP}>lalalala</p>
+      <h2 {...fadeInH2}>Hello</h2>
+      <p {...fadeInP}>lalalala</p>
     </div>
   )
 }

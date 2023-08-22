@@ -82,7 +82,8 @@ function Immer() {
         <ul className='immerList'>
           {data.array.map(info => (
             <li key={info.id} onClick={() => onRemove(info.id)}>
-              {info.username} ({info.name})
+              <p>아이디 : {info.username}</p>
+              <p>이름 : {info.name}</p>
             </li>
           ))}
         </ul>

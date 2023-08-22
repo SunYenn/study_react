@@ -3,6 +3,7 @@
   border: none;
   border-radius: 5px;
   margin: 5px;
+  padding: 5px;
 }
 
 .immerList>li {
@@ -12,4 +13,8 @@
 
 .immerList>li:last-child {
   border: none;
+}
+
+.immerList>li>p {
+  margin: 0;
 }
