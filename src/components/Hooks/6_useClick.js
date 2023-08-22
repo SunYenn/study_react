@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 
 function HookUseClick() {
 
-  const potato = useRef<HTMLInputElement | null>(null);
+  const potato = useRef();
 
   setTimeout(() => {
     if (potato.current) {
@@ -12,7 +12,7 @@ function HookUseClick() {
   }, 3000);
 
   const useClick = (onClick) => {
-    const element = useRef<HTMLInputElement | null>(null);
+    const element = useRef();
     useEffect(() => {
       if (element.current) {
         element.current.addEventListener("click", onClick)

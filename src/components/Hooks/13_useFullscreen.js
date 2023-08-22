@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 const HookUseFullscreen = () => {
 
   const useFullscreen = (callback) => {
-    const element = useRef<HTMLImageElement | null>(null);
+    const element = useRef();
 
     const runCb = (isFull) => {
       if (callback && typeof callback === 'function') {

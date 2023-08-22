@@ -19,7 +19,7 @@
   margin-bottom: 0px;
 }
 
-.nav-tabs .nav-link.active {
+.nav-tabs .nav-link:focus {
   background-color: #a8cbff;
 }
 
@@ -73,4 +73,8 @@
 .btn:hover {
   background-color: #5f9fff;
   outline: 0;
+}
+
+.form-control {
+  margin: 7px;
 }

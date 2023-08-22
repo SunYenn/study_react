@@ -18,6 +18,23 @@
   padding: 7px;
 }
 
-.nav-link:focus, .nav-link:hover {
+.nav-link:hover {
   background-color: #e0dcdc !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #e0dcdc !important;
+  color: #5a58ca;
+}
+
+.hook-main {
+  padding: 50px;
+  height: calc(100% - 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hook-main .btn {
+  width: auto;
 }

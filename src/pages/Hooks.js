@@ -1,6 +1,5 @@
-import { Outlet, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 import { Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import '../styles/Hooks.css'
 
 import HookUseState from '../components/Hooks/1_useState';
@@ -19,18 +18,11 @@ import HookUseFullscreen from '../components/Hooks/13_useFullscreen';
 import HookUseAxios from '../components/Hooks/14_useAxios';
 
 const Layout = () => {
-  const navigate = useNavigate();
 
-  const goBack = () => {
-    // 이전 페이지로 이동
-    navigate(-1);
-  };
+  const [activeTab, setActiveTab] = useState('useState');
 
-  const goMain = () => {
-    // articles 경로로 이동
-    navigate('/', {
-      replace: true,
-    });
+  const handleTabSelect = (tab) => {
+    setActiveTab(tab);
   };
 
   return (
@@ -38,51 +30,134 @@ const Layout = () => {
       <div className='hook-nav'>
         <Nav variant="pills">
           <Nav.Item>
-            <Nav.Link as={Link} to="/HookUseState">useState</Nav.Link>
+            <Nav.Link
+              active={activeTab === 'useState'}
+              onClick={() => handleTabSelect('useState')}
+            >
+              useState
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link as={Link} to="/HookUseInput">useInput</Nav.Link>
+            <Nav.Link
+              active={activeTab === 'useInput'}
+              onClick={() => handleTabSelect('useInput')}
+            >
+              useInput
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link as={Link} to="/HookUseTabs">useTabs</Nav.Link>
+            <Nav.Link
+              active={activeTab === 'useTabs'}
+              onClick={() => handleTabSelect('useTabs')}
+            >
+              useTabs
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link as={Link} to="/HookUseEffect">useEffect</Nav.Link>
+            <Nav.Link
+              active={activeTab === 'useEffect'}
+              onClick={() => handleTabSelect('useEffect')}
+            >
+              useEffect
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link as={Link} to="/HookUseTitle">useTitle</Nav.Link>
+            <Nav.Link
+              active={activeTab === 'useTitle'}
+              onClick={() => handleTabSelect('useTitle')}
+            >
+              useTitle
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link as={Link} to="/HookUseClick">useClick</Nav.Link>
+            <Nav.Link
+              active={activeTab === 'useClick'}
+              onClick={() => handleTabSelect('useClick')}
+            >
+              useClick
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link as={Link} to="/HookUseConfirm">useConfirm</Nav.Link>
+            <Nav.Link
+              active={activeTab === 'useConfirm'}
+              onClick={() => handleTabSelect('useConfirm')}
+            >
+              useConfirm
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link as={Link} to="/HookUsePreventLeave">usePreventLeave</Nav.Link>
+            <Nav.Link
+              active={activeTab === 'usePreventLeave'}
+              onClick={() => handleTabSelect('usePreventLeave')}
+            >
+              usePreventLeave
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link as={Link} to="/HookUseBeforeLeave">useBeforeLeave</Nav.Link>
+            <Nav.Link
+              active={activeTab === 'useBeforeLeave'}
+              onClick={() => handleTabSelect('useBeforeLeave')}
+            >
+              useBeforeLeave
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link as={Link} to="/HookUseFadeIn">useFadeIn</Nav.Link>
+            <Nav.Link
+              active={activeTab === 'useFadeIn'}
+              onClick={() => handleTabSelect('useFadeIn')}
+            >
+              useFadeIn
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link as={Link} to="/HookUseNetwork">useNetwork</Nav.Link>
+            <Nav.Link
+              active={activeTab === 'useNetwork'}
+              onClick={() => handleTabSelect('useNetwork')}
+            >
+              useNetwork
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link as={Link} to="/HookUseScroll">useScroll</Nav.Link>
+            <Nav.Link
+              active={activeTab === 'useScroll'}
+              onClick={() => handleTabSelect('useScroll')}
+            >
+              useScroll
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link as={Link} to="/HookUseFullscreen">useFullscreen</Nav.Link>
+            <Nav.Link
+              active={activeTab === 'useFullscreen'}
+              onClick={() => handleTabSelect('useFullscreen')}
+            >
+              useFullscreen
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link as={Link} to="/HookUseAxios">useAxios</Nav.Link>
+            <Nav.Link
+              active={activeTab === 'useAxios'}
+              onClick={() => handleTabSelect('useAxios')}
+            >
+              useAxios
+            </Nav.Link>
           </Nav.Item>
         </Nav>
       </div>
-      <div>
-        <Outlet />
+      <div className='hook-main'>
+        {activeTab === 'useState' ? <HookUseState /> : null}
+        {activeTab === 'useInput' ? <HookUseInput /> : null}
+        {activeTab === 'useTabs' ? <HookUseTabs /> : null}
+        {activeTab === 'useEffect' ? <HookUseEffect /> : null}
+        {activeTab === 'useTitle' ? <HookUseTitle /> : null}
+        {activeTab === 'useClick' ? <HookUseClick /> : null}
+        {activeTab === 'useConfirm' ? <HookUseConfirm /> : null}
+        {activeTab === 'usePreventLeave' ? <HookUsePreventLeave /> : null}
+        {activeTab === 'useBeforeLeave' ? <HookUseBeforeLeave /> : null}
+        {activeTab === 'useFadeIn' ? <HookUseFadeIn /> : null}
+        {activeTab === 'useNetwork' ? <HookUseNetwork /> : null}
+        {activeTab === 'useScroll' ? <HookUseScroll /> : null}
+        {activeTab === 'useFullscreen' ? <HookUseFullscreen /> : null}
+        {activeTab === 'useAxios' ? <HookUseAxios /> : null}
       </div>
     </div>
   );

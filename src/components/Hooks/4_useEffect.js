@@ -7,11 +7,11 @@ function HookUseEffect() {
     console.log('hello')
   }
 
-  const [number, setNumber] = useState(0)
+  const [number, setNumber] = useState(0) // 숫자 값을 변환 시키는 객체
   const [anumber, setAnumber] = useState(0)
 
   // useEffect(() => { sayHello() })
-  useEffect(sayHello, [number])
+  useEffect(sayHello, [number]) // number값이 변할 때마다 sayHello 호출
 
   return (
     <div>
