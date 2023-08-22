@@ -4,9 +4,14 @@ import Button from 'react-bootstrap/Button';
 
 const HookUseFullscreen = () => {
 
+
+  // typescript : const useFullscreen = (callback: Function) => {
   const useFullscreen = (callback) => {
+
+    // typescript : const element = useRef<HTMLImageElement | null>(null);
     const element = useRef();
 
+    // typescript : const runCb = (isFull: boolean) => {
     const runCb = (isFull) => {
       if (callback && typeof callback === 'function') {
         callback(isFull)

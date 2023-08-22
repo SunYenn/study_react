@@ -24,6 +24,7 @@ function HookUseNetwork() {
     return status
   }
 
+  // typescript : const handleNetworkChange = (online: any) => {
   const handleNetworkChange = (online) => {
     console.log(online ? "We just went online" : "we are offline")
   }

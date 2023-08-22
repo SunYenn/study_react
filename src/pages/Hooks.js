@@ -16,6 +16,7 @@ import HookUseNetwork from '../components/Hooks/11_useNetwork';
 import HookUseScroll from '../components/Hooks/12_useScroll';
 import HookUseFullscreen from '../components/Hooks/13_useFullscreen';
 import HookUseAxios from '../components/Hooks/14_useAxios';
+import HookUseCallback from '../components/Hooks/15_useCallback';
 
 const Layout = () => {
 
@@ -141,6 +142,14 @@ const Layout = () => {
               useAxios
             </Nav.Link>
           </Nav.Item>
+          <Nav.Item>
+            <Nav.Link
+              active={activeTab === 'useCallback'}
+              onClick={() => handleTabSelect('useCallback')}
+            >
+              useCallback
+            </Nav.Link>
+          </Nav.Item>
         </Nav>
       </div>
       <div className='hook-main'>
@@ -158,6 +167,7 @@ const Layout = () => {
         {activeTab === 'useScroll' ? <HookUseScroll /> : null}
         {activeTab === 'useFullscreen' ? <HookUseFullscreen /> : null}
         {activeTab === 'useAxios' ? <HookUseAxios /> : null}
+        {activeTab === 'useCallback' ? <HookUseCallback /> : null}
       </div>
     </div>
   );
