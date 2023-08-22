@@ -50,6 +50,7 @@ const App = () => {
         {activeTab === 'hooks' ? <Hooks /> : null}
       </div>
     </div>
+    
   );
 };
 

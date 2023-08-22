@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function HookUseFadeIn() {
 
-  const useFadeIn = (duration: number, delay: number) => {
+  const useFadeIn = (duration, delay) => {
     const element = useRef<HTMLHeadingElement | HTMLParagraphElement>(null);
     useEffect(() => {
       if(element.current) {

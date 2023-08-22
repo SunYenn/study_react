@@ -4,7 +4,7 @@
   text-align: center;
 }
 
-.hook-nav{
+.hook-nav {
   border-bottom: 1px solid #ddd;
 }
 
@@ -16,4 +16,8 @@
 
 .hook-nav .nav-link {
   padding: 7px;
+}
+
+.nav-link:focus, .nav-link:hover {
+  background-color: #e0dcdc !important;
 }
