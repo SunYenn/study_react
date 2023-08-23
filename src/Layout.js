@@ -22,10 +22,16 @@ const Layout = () => {
       <div className='App-header'>
         <Nav variant="tabs">
           <Nav.Item>
+            <Nav.Link onClick={() => goPage('/Home/yeeun/coral')}>Home</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
             <Nav.Link onClick={() => goPage('/Hooks')}>Hooks</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link onClick={() => goPage('/Immer')}>Immer</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link onClick={() => goPage('/Axios')}>Axios</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link onClick={() => goPage('/Todo')}>Todo</Nav.Link>

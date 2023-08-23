@@ -1,0 +1,29 @@
+.container-wrap {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 22px;
+  min-width: 680px;
+  background-color: white;
+  border-radius: 12px 24px;
+}
+
+.title-area {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  padding: 0 24px;
+}
+
+table {
+  height: 100%;
+  width: 100%;
+  border-color: gray;
+}
+
+th,
+td {
+  justify-content: center;
+  padding: 12px 24px !important;
+  border-right: none;
+  border-bottom: 1px solid lightgray !important;
+}
