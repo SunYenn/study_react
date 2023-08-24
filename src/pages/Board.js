@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../styles/Axios.css'
+import '../styles/Board.css'
 
 function GetBoard() {
   const [boardData, setBoardData] = useState([]);

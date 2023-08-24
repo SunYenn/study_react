@@ -25,12 +25,12 @@ function Immer() {
 
   // useState vs useRef
   
-  // useStste : 변경 시 다시 랜더링을 트리거하는 상태 저장 값을 저장하는 데 사용
-  // 상태 변수 변경시 구성 요소 다시 랜더링 됨.
+  // useStste : 변경 시 다시 렌더링을 트리거하는 상태 저장 값을 저장하는 데 사용
+  // 상태 변수 변경시 구성 요소 다시 렌더링 됨.
 
-  // useRef : 변경시 다시 랜더링을 트리거하지 않는 변경 가능한 값 저장하는 데 사용됨
-  // 값을 변경해도 구성요소가 다시 랜더링 되지 않음
-  // 일반적으로 UI에 영향을 안 주거나, 재랜더링을 할 필요가 없는 값에 사용.
+  // useRef : 변경시 다시 렌더링을 트리거하지 않는 변경 가능한 값 저장하는 데 사용됨
+  // 값을 변경해도 구성요소가 다시 렌더링 되지 않음
+  // 일반적으로 UI에 영향을 안 주거나, 재렌더링을 할 필요가 없는 값에 사용.
   const nextId = useRef(1);
   const [form, setForm] = useState({ name: '', username: '' });
   const [data, setData] = useState({ array: [], uselessValue: null });

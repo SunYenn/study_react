@@ -1,14 +1,7 @@
+import { Component } from 'react';
 import { useParams } from 'react-router-dom';
 
-// react의 가장 기본적인 형태
-function base() {
-  return (
-    // 반드시 하나의 element로 구성되어야 함.
-    <>
-    </>
-  )
-}
-
+// 함수형 컴포넌트
 function Hello({ color, name }) {
 
   return (
@@ -23,16 +16,31 @@ Hello.defaultProps = {
   name: 'OO'
 }
 
+// 클래스형 컴포넌트
+class Hi extends Component {
+  render() {
+
+    const { color } = this.props;
+
+    return (
+      <>
+        <h1 style={{ color }}>Hi</h1>
+      </>
+    )
+  }
+}
+
 function Home() {
 
-  // ${this.$route.query.name} : vue 형식
+  // vue 형식 : ${this.$route.query.name}
   const { name, color } = useParams();
 
   return (
     <div style={{'textAlign' : 'center'}}>
+      <Hi color={'deeppink'} />
       <Hello />
-      <Hello name={name} color={color}/>
-      <Hello name="예은" color={'blue'} />
+      <Hello name="yeeun" color={'blue'} />
+      <Hello name={name} color={color} />
     </div>
   )
 }

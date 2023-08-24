@@ -24,8 +24,8 @@ export default function SmartHome() {
   // const toggleKitchen = () => setKitchenOn(!kitchenOn);
   // const toggleBath = () => setBathOn(!bathOn);
 
-  // 함수의 참조값이 SmartHome 컴포넌트가 랜더링될 때마다 새로운 참조값으로 모두 바뀌어버리기 때문에 
-  // useCallback()의 두번쨰 인자로 넘어온 의존 배열이 변경될 대만 첫 번째 인자로 넘어온 함수 호출
+  // 함수의 참조값이 SmartHome 컴포넌트가 렌더링될 때마다 새로운 참조값으로 모두 바뀌어버리기 때문에 
+  // useCallback()의 두번쨰 인자로 넘어온 의존 배열이 변경될 때만 첫 번째 인자로 넘어온 함수 호출
   const toggleMaster = useCallback(() => setMasterOn(!masterOn), [masterOn]);
   const toggleKitchen = useCallback(() => setKitchenOn(!kitchenOn), [kitchenOn]);
   const toggleBath = useCallback(() => setBathOn(!bathOn), [bathOn]);

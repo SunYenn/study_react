@@ -24,9 +24,12 @@ const HookUseFullscreen = () => {
         runCb(true)
       }
     }
+
     const exitFull = () => {
-      document.exitFullscreen()
-      runCb(false)
+      if (document.fullscreenElement) {
+        document.exitFullscreen()
+        runCb(false)
+      }
     }    
 
     return { element, triggerFull, exitFull }
