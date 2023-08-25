@@ -25,6 +25,9 @@ const Layout = () => {
             <Nav.Link onClick={() => goPage('/Home/예은/coral')}>Home</Nav.Link>
           </Nav.Item>
           <Nav.Item>
+            <Nav.Link onClick={() => goPage('/LifeCyle')}>LifeCyle</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
             <Nav.Link onClick={() => goPage('/Hooks')}>Hooks</Nav.Link>
           </Nav.Item>
           <Nav.Item>

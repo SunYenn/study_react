@@ -10,20 +10,26 @@
 .title-area {
   display: flex;
   align-items: center;
-  height: 65px;
+  height: 70px;
   padding: 0 24px;
 }
 
+.title-area > * {
+  margin: 0;
+}
+
 table {
-  height: 100%;
-  width: 100%;
-  border-color: gray;
+  border-bottom: 1px solid #ededed;
+  border-top: 1px solid #ededed;
 }
 
 th,
 td {
-  justify-content: center;
-  padding: 12px 24px !important;
+  padding: 10px 24px !important;
   border-right: none;
-  border-bottom: 1px solid lightgray !important;
+  border-bottom: none
+}
+
+td {
+  font-weight: 300;
 }

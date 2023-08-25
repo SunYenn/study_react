@@ -7,6 +7,7 @@ import Todo from './pages/Todo'
 import Immer from './pages/Immer';
 import Hooks from './pages/Hooks';
 import Board from './pages/Board';
+import LifeCyle from './pages/LifeCycle';
 
 // react에선 JSX(JavaScript XML) 사용
 // 하나의 DOM으로 구성되어야 함
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/Immer" element={<Immer />} />
         <Route path="/Todo" element={<Todo />} />
         <Route path="/Board" element={<Board />} />
+        <Route path="/LifeCyle" element={<LifeCyle />} />
       </Route>
     </Routes>
   );

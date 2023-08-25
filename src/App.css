@@ -60,7 +60,6 @@
 }
 
 .btn {
-  width: calc(100% - 300px);
   min-height: 20px;
   border: none;
   background-color: #86b7fe;
@@ -77,4 +76,8 @@
 
 .form-control {
   margin: 7px;
+}
+
+.center {
+  text-align: center;
 }
