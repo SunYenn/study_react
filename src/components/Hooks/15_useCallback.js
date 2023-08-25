@@ -1,13 +1,12 @@
 import React, { useState, useCallback } from "react";
-import { Button } from "react-bootstrap";
 
 // useCallback : 첫번째 인자로 넘어온 함수를, 두번째 인자로 넘어온 배열 내의 값이 변경될 때까지 저장해놓고 재사용할 수 있게 해줌.
 function Light({ room, on, toggle }) {
   console.log({ room, on });
   return (
-    <Button onClick={toggle}>
+    <button className='btn' onClick={toggle}>
       {room} {on ? "💡" : "⚫"}
-    </Button>
+    </button>
   );
 }
 

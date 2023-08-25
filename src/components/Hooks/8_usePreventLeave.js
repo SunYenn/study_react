@@ -1,6 +1,5 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
 
 function HookUsePreventLeave() {
 
@@ -22,8 +21,8 @@ function HookUsePreventLeave() {
   return (
     <div>
       <h2>Hi</h2>
-      <Button onClick={enablePrevent}>protect</Button>
-      <Button onClick={disablePrevent}>unprotect</Button>
+      <button className='btn' onClick={enablePrevent}>protect</button>
+      <button className='btn' onClick={disablePrevent}>unprotect</button>
     </div>
   )
 }

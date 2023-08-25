@@ -1,5 +1,4 @@
 import useAxios from "./14_useAxios_module"
-import Button from 'react-bootstrap/Button';
 
 const HookUseAxios = () => {
 
@@ -13,7 +12,7 @@ const HookUseAxios = () => {
       <h1>Hello</h1>
       <h2>{data && data.status}</h2>
       <h2>{loading && "Loading"}</h2>
-      <Button onClick={refetch}>Refetch</Button>
+      <button className='btn' onClick={refetch}>Refetch</button>
     </div>
   );
 }

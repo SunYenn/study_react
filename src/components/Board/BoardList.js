@@ -1,33 +1,46 @@
-import Table from 'react-bootstrap/Table';
+import React from 'react';
+import { Table } from 'antd';
 
 function BoardList({ data }) {
+  const columns = [
+    {
+      title: '',
+      dataIndex: 'rnum',
+      key: 'rnum',
+      render: (text) => <div className='center'>{text}</div>,
+    },
+    {
+      title: '제목',
+      dataIndex: 'title',
+      key: 'title',
+    },
+    {
+      title: '작성자',
+      dataIndex: 'user_id',
+      key: 'user_id',
+    },
+    {
+      title: '작성일',
+      dataIndex: 'cre_dt',
+      key: 'cre_dt',
+    },
+    {
+      title: '수정일',
+      dataIndex: 'udt_dt',
+      key: 'udt_dt',
+    },
+  ];
 
   return (
-    <>
-      <Table hover striped>
-        <thead>
-          <tr>
-            <th className='center'>{data.length}</th>
-            <th>제목</th>
-            <th>작성자</th>
-            <th>작성일</th>
-            <th>수정일</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((item) => (
-            <tr key={item.rnum}>
-              <td className='center'>{item.rnum}</td>
-              <td>{item.title}</td>
-              <td>{item.user_id}</td>
-              <td>{item.cre_dt}</td>
-              <td>{item.udt_dt}</td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
-    </>
-  )
+    <Table
+      dataSource={data}
+      columns={columns}
+      rowKey={(record) => record.rnum}
+      pagination={false}
+      bordered
+      size='middle'
+    />
+  );
 }
 
-export default BoardList
+export default BoardList;

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Devtools통해서 online, offline 설정
 function HookUseNetwork() {

@@ -1,15 +1,10 @@
-import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
-import Toast from 'react-bootstrap/Toast';
+import React from 'react';
+import { message } from 'antd';
 
 function HookUseConfirm() {
 
-  const [show, setShow] = useState(false);
-  const [message, setMessage] = useState('')
-
   // typescript : const useConfirm = (message = '', onConfirm: Function, onCancel: Function) => {
-  const useConfirm = (message = '', onConfirm, onCancel) => {
+  const useConfirm = (content = '', onConfirm, onCancel) => {
     if (onConfirm && typeof onConfirm !== "function") {
       return
     }
@@ -17,29 +12,21 @@ function HookUseConfirm() {
       return
     }
     const confirmAction = () => {
-      if (window.confirm(message)) {
+      if (window.confirm(content)) {
         onConfirm()
-        setShow(true)
       } else {
         onCancel()
-        setShow(true)
       }
     }
     return confirmAction
   }
 
-  const deleteWorld = () => setMessage("Deleting the world...")
-  const abort = () => setMessage("Aborted")
+  const deleteWorld = () => message.warning("Deleting the world...", 1.5)
+  const abort = () => message.warning("Aborted", 1.5)
   const confirmDelete = useConfirm("Are you sure", deleteWorld, abort)
 
   return (
     <div>
-
-      <Toast onClose={() => setShow(false)} show={show} delay={1500} autohide>
-        <Toast.Body>
-          { message }
-        </Toast.Body>
-      </Toast>
 
       <h2>Hello</h2>
       <button className='btn' onClick={confirmDelete}>Delete the world</button>
