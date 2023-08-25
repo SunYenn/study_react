@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Nav } from 'react-bootstrap';
 import '../styles/Hooks.css'
 import HookList from '../components/Hooks/HookList';
+import { Menu } from 'antd';
+
+const { Item } = Menu;
 
 const Layout = () => {
   const [activeTab, setActiveTab] = useState('useState');
@@ -18,20 +20,19 @@ const Layout = () => {
 
   return (
     <div className='hook'>
-      <div className='hook-nav'>
-        <Nav variant="pills">
-          {hookTabs.map(tab => (
-            <Nav.Item key={tab}>
-              <Nav.Link
-                active={activeTab === tab}
-                onClick={() => handleTabSelect(tab)}
-              >
-                {tab}
-              </Nav.Link>
-            </Nav.Item>
-          ))}
-        </Nav>
-      </div>
+      <Menu 
+        mode="inline" 
+        selectedKeys={[activeTab]}
+        style={{
+          width: 256,
+        }}
+      >
+        {hookTabs.map(tab => (
+          <Item key={tab} onClick={() => handleTabSelect(tab)}>
+            {tab}
+          </Item>
+        ))}
+      </Menu>
       <div className='hook-main'>
         <HookList activeTab={activeTab} />
       </div>

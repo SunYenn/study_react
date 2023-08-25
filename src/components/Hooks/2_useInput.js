@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Form from 'react-bootstrap/Form';
+import { Input } from 'antd';
 
 function HookUseInput() {
   const maxLen = (value) => value.length < 10 && !value.includes("@"); // value값이 10자 미만, @포함되지 않도록
@@ -27,7 +27,7 @@ function HookUseInput() {
   return (
     <div>
       {/*  {...name} : useInput에서 반환된 name 객체의 모든 속성(name, onchange)을 Form.Control의 개별 props로 확산 */}
-      <Form.Control placeholder="Name" {...name} />
+      <Input placeholder="Name" {...name} />
       <p>{ name.value }</p>
     </div>
   );

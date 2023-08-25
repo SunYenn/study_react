@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
 
 function HookUseEffect() {
 
@@ -17,8 +16,8 @@ function HookUseEffect() {
   return (
     <div>
       <h2>hello</h2>
-      <Button variant='primary' onClick={() => setNumber(number + 1)}>{number}</Button>
-      <Button variant='primary' onClick={() => setAnumber(anumber + 1)}>{anumber}</Button>
+      <button className='btn' variant='primary' onClick={() => setNumber(number + 1)}>{number}</button>
+      <button className='btn' onClick={() => setAnumber(anumber + 1)}>{anumber}</button>
     </div>
   )
 }

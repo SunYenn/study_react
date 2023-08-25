@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import Form from 'react-bootstrap/Form';
+import { Input } from 'antd';
 
 function HookUseClick() {
 
@@ -34,7 +34,7 @@ function HookUseClick() {
   return (
     <div>
       <h2 ref={title}>Hello</h2>
-      <Form.Control placeholder="Name" ref={potato} />
+      <Input placeholder="Name" ref={potato} />
     </div>
   )
 }

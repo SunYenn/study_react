@@ -42,7 +42,7 @@ function HookUseConfirm() {
       </Toast>
 
       <h2>Hello</h2>
-      <Button onClick={confirmDelete}>Delete the world</Button>
+      <button className='btn' onClick={confirmDelete}>Delete the world</button>
 
     </div>
   )

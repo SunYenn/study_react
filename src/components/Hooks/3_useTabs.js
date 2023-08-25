@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 
 function HookUseTabs() {
 
@@ -32,9 +31,9 @@ function HookUseTabs() {
     <div>
       {content.map((section, index) => (
         // typescript : <Button variant='info' onClick={() => tabs.changeItem(index)} key={index}>
-        <Button variant='info' onClick={() => tabs.changeItem(index)} key={index}>
+        <button className='btn' onClick={() => tabs.changeItem(index)} key={index}>
           {section.tab}
-        </Button>
+        </button>
       ))}
       <div>
         {/* typescript : {tabs?.currentItem.content} */}

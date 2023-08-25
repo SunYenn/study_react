@@ -1,6 +1,11 @@
 import '../styles/Immer.css'
 
 function ImmerCpnt({data, form, onChange, onSubmit, onRemove}) {
+
+  const style = {
+    width: 'calc(100% - 300px)'
+  }
+
   return (
     <>
       <form onSubmit={onSubmit} style={{ display: 'flex' }}>
@@ -18,7 +23,7 @@ function ImmerCpnt({data, form, onChange, onSubmit, onRemove}) {
           value={form.name}
           onChange={onChange}
         />
-        <button className='btn' type="submit">등록</button>
+        <button className='btn' type="submit" style={style}>등록</button>
       </form>
       <div>
         <ul className='immerList'>

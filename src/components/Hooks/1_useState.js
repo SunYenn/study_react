@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 
 const HookUseState = () => {
 
@@ -14,8 +13,8 @@ const HookUseState = () => {
   return (
     <div>
         <p>{ item }</p>
-        <Button variant="info" onClick={incrementItem}>Increment</Button>
-        <Button variant="info" onClick={decrementItem}>Decrement</Button>
+        <button className='btn' onClick={incrementItem}>Increment</button>
+        <button className='btn' onClick={decrementItem}>Decrement</button>
     </div>
   );
 }
