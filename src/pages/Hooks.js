@@ -12,11 +12,18 @@ const Layout = () => {
     setActiveTab(tab);
   };
 
+  // const hookTabs = [
+  //   'useState', 'useInput', 'useTabs', 'useEffect', 'useTitle', 'useClick',
+  //   'useConfirm', 'usePreventLeave', 'useBeforeLeave', 'useFadeIn', 'useNetwork',
+  //   'useScroll', 'useFullscreen', 'useAxios', 'useCallback'
+  // ];
+
   const hookTabs = [
     'useState', 'useInput', 'useTabs', 'useEffect', 'useTitle', 'useClick',
-    'useConfirm', 'usePreventLeave', 'useBeforeLeave', 'useFadeIn', 'useNetwork',
+    'useConfirm', 'usePreventLeave', 'useBeforeLeave', 'useNetwork',
     'useScroll', 'useFullscreen', 'useAxios', 'useCallback'
   ];
+
 
   return (
     <div className='hook'>

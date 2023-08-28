@@ -17,8 +17,6 @@ class LifeCycleFC extends Component {
    * render
    * componentDidMount
    */
-
-  
   // 컴포넌트의 생성자 메서드, 가장 먼저 실행
   constructor(props) {
     super(props);
