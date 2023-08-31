@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 const HookUseState = () => {
 
+  // useState : 상태값을 관리하는 함수
+
   // item : 현재 상태 값 변수
   // setItem : 상태 값을 갱신해주는 Setter 함수
   // useState()의 인수 : item의 초기값. Number 타입.

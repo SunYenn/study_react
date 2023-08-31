@@ -18,9 +18,12 @@ const Layout = () => {
   //   'useScroll', 'useFullscreen', 'useAxios', 'useCallback'
   // ];
 
+  // 리액트 16.8 이전 버전에서는 함수형 컴포넌트에서는 상태를 관리할 수 없었지만,
+  // Hook 이라는 기능이 도입되면서 함수형 컴포넌트에서도 상태를 관리할 수 있게됨.
+
   const hookTabs = [
     'useState', 'useInput', 'useTabs', 'useEffect', 'useTitle', 'useClick',
-    'useConfirm', 'usePreventLeave', 'useBeforeLeave', 'useNetwork',
+    'useConfirm', 'useBeforeLeave', 'useNetwork',
     'useScroll', 'useFullscreen', 'useAxios', 'useCallback'
   ];
 

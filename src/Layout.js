@@ -22,7 +22,7 @@ const Layout = () => {
     {
       key: '1',
       label: 'Home',
-      path: '/Home/Yeeun/coral'
+      path: '/Home/예은/coral'
     },
     {
       key: '2',

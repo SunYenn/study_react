@@ -3,6 +3,8 @@ import { Input } from 'antd';
 
 function HookUseClick() {
 
+  // useRef : 특정 DOM을 참조할 때 사용
+
   // typescript : const potato = useRef<HTMLInputElement | null>(null);
   const potato = useRef();
 
